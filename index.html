@@ -30,8 +30,8 @@
                 Your Email: <input type="email" name="email" id="email" placeholder="e.g., john@example.com" required>
             </label>
             <label for="site-location">
-                Site Location: <input type="text" name="siteLocation" id="site-location" placeholder="e.g., Main Office - Jakarta"
-                    required>
+                Site Location: <input type="text" name="siteLocation" id="site-location"
+                    placeholder="e.g., Main Office - Jakarta" required>
             </label>
             <label for="site-contact-person">
                 Site Contact Person: <input type="text" name="siteContact" id="site-contact-person"
@@ -42,8 +42,8 @@
                     required>
             </label>
             <label for="floor-number">
-                Number of Floors: <input type="number" name="floorNumber" id="floor-number" min="1" max="100" placeholder="e.g., 7"
-                    required>
+                Number of Floors: <input type="number" name="floorNumber" id="floor-number" min="1" max="100"
+                    placeholder="e.g., 7" required>
             </label>
             <label for="area-size">
                 Area Size (m²): <input type="number" name="areaSize" id="area-size" placeholder="e.g., 150" required>
@@ -81,11 +81,12 @@
                     placeholder="e.g., Monitor vehicle entry" required>
             </label>
             <label for="height">
-                Mounting Height (meters): <input type="number" name="height" id="height" placeholder="e.g., 3.5" required>
+                Mounting Height (meters): <input type="number" name="height" id="height" placeholder="e.g., 3.5"
+                    required>
             </label>
             <label for="distance">
-                Distance to DVR/NVR/Switch (meters): <input type="number" name="distance" id="distance" placeholder="e.g., 25"
-                    required>
+                Distance to DVR/NVR/Switch (meters): <input type="number" name="distance" id="distance"
+                    placeholder="e.g., 25" required>
             </label>
             <label for="cctv-type">
                 Camera Type Recommendation:
@@ -104,7 +105,23 @@
         </section>
         <input type="submit" value="Submit" id="submit">
     </form>
-    <script src="script.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzu6hxZNq54vt6mXMvYEd6UwKCayE5YGhccctcY4HqXpxey09-__xJYIaAwsnn_jTH8/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    alert('Your data has been successfully submitted!');
+                    form.reset();
+                })
+                .catch(error => {
+                    alert('An error occurred. Please try again.');
+                    console.error('Error!', error.message);
+                });
+        });
+    </script>
 </body>
 
 </html>
