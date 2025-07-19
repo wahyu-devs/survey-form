@@ -19,7 +19,7 @@ document.getElementById('survey-form').addEventListener('submit', function(e) {
         notes: document.getElementById('notes').value
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbyrlbVtnjVoxfqH-ukk_zyrCiILHi9fL_YdzTYz1Pd9w2VYRodVMEzmkmFj6YGsdxojdQ/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwdf4D6uB4VR44eCLz8YN_E2L1ZozysRDlWHy3NhblQKX_aFLCyKa01uzRIl-ATmAIrxA/exec', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(formData)
