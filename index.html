@@ -21,32 +21,32 @@
         <section>
             <h3>General Site Information</h3>
             <label for="visit-date">
-                Date of Visit: <input type="date" name="" id="visit-date" required>
+                Date of Visit: <input type="date" name="dateVisit" id="visit-date" required>
             </label>
-            <label for="name" id="name-label">
-                Your Name: <input type="text" name="" id="name" placeholder="e.g., John Doe" required>
+            <label for="name">
+                Your Name: <input type="text" name="name" id="name" placeholder="e.g., John Doe" required>
             </label>
-            <label for="email" id="email-label">
-                Your Email: <input type="email" name="" id="email" placeholder="e.g., john@example.com" required>
+            <label for="email">
+                Your Email: <input type="email" name="email" id="email" placeholder="e.g., john@example.com" required>
             </label>
             <label for="site-location">
-                Site Location: <input type="text" name="" id="site-location" placeholder="e.g., Main Office - Jakarta"
+                Site Location: <input type="text" name="siteLocation" id="site-location" placeholder="e.g., Main Office - Jakarta"
                     required>
             </label>
             <label for="site-contact-person">
-                Site Contact Person: <input type="text" name="" id="site-contact-person"
+                Site Contact Person: <input type="text" name="siteContact" id="site-contact-person"
                     placeholder="e.g., Mr. Andi - 08123456789" required>
             </label>
             <label for="area-name">
-                Building / Area Name: <input type="text" name="" id="area-name" placeholder="e.g., Warehouse A"
+                Building / Area Name: <input type="text" name="areaName" id="area-name" placeholder="e.g., Warehouse A"
                     required>
             </label>
-            <label for="number" id="number-label">
-                Number of Floors: <input type="number" name="" id="number" min="1" max="100" placeholder="e.g., 7"
+            <label for="floor-number">
+                Number of Floors: <input type="number" name="floorNumber" id="floor-number" min="1" max="100" placeholder="e.g., 7"
                     required>
             </label>
             <label for="area-size">
-                Area Size (m²): <input type="number" name="" id="area-size" placeholder="e.g., 150" required>
+                Area Size (m²): <input type="number" name="areaSize" id="area-size" placeholder="e.g., 150" required>
             </label>
 
             <label>Is a building blueprint available?</label>
@@ -69,27 +69,27 @@
         <section>
             <h3>CCTV Point Survey</h3>
             <label for="total-cctv">
-                Total number of CCTV points to install: <input type="number" name="" id="total-cctv"
+                Total number of CCTV points to install: <input type="number" name="cctvNumber" id="total-cctv"
                     placeholder="e.g., 10" required>
             </label>
             <label for="cctv-location">
-                CCTV Point Location: <input type="text" name="" id="cctv-location"
+                CCTV Point Location: <input type="text" name="cctvLocation" id="cctv-location"
                     placeholder="e.g., Entrance, Lobby, Parking Area" required>
             </label>
             <label for="objective">
-                Surveillance Objective: <input type="text" name="" id="objective"
+                Surveillance Objective: <input type="text" name="objective" id="objective"
                     placeholder="e.g., Monitor vehicle entry" required>
             </label>
             <label for="height">
-                Mounting Height (meters): <input type="number" name="" id="height" placeholder="e.g., 3.5" required>
+                Mounting Height (meters): <input type="number" name="height" id="height" placeholder="e.g., 3.5" required>
             </label>
             <label for="distance">
-                Distance to DVR/NVR/Switch (meters): <input type="number" name="" id="distance" placeholder="e.g., 25"
+                Distance to DVR/NVR/Switch (meters): <input type="number" name="distance" id="distance" placeholder="e.g., 25"
                     required>
             </label>
             <label for="cctv-type">
                 Camera Type Recommendation:
-                <select name="cctvType" id="dropdown">
+                <select name="cctvType" id="cctv-type">
                     <option value="">-- Select camera type --</option>
                     <option value="Dome">Dome</option>
                     <option value="Bullet">Bullet</option>
