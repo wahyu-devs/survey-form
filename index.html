@@ -30,9 +30,10 @@
                 Your Email: <input type="email" name="" id="email" placeholder="e.g., john@example.com" required>
             </label>
             <label for="site-location">
-                Site Location: <input type="text" name="" id="site-location" placeholder="e.g., Main Office - Jakarta"" required>
+                Site Location: <input type="text" name="" id="site-location" placeholder="e.g., Main Office - Jakarta"
+                    required>
             </label>
-            <label for=" site-contact-person">
+            <label for="site-contact-person">
                 Site Contact Person: <input type="text" name="" id="site-contact-person"
                     placeholder="e.g., Mr. Andi - 08123456789" required>
             </label>
@@ -88,12 +89,12 @@
             </label>
             <label for="cctv-type">
                 Camera Type Recommendation:
-                <select name="" id="dropdown">
+                <select name="cctvType" id="dropdown">
                     <option value="">-- Select camera type --</option>
-                    <option value="">Dome</option>
-                    <option value="">Bullet</option>
-                    <option value="">PTZ</option>
-                    <option value="">Others</option>
+                    <option value="Dome">Dome</option>
+                    <option value="Bullet">Bullet</option>
+                    <option value="PTZ">PTZ</option>
+                    <option value="Others">Others</option>
                 </select>
             </label>
             <label for="notes">
@@ -103,6 +104,7 @@
         </section>
         <input type="submit" value="Submit" id="submit">
     </form>
+    <script src="script.js"></script>
 </body>
 
 </html>
