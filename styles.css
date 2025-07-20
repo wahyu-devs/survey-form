@@ -55,7 +55,7 @@ form {
     width: 85vw;
     max-width: 700px;
     margin: 0 auto;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
 
 }
 
@@ -97,6 +97,10 @@ select {
     margin-bottom: 0;
 }
 
+input[type="date"] {
+    -webkit-appearance: none;
+}
+
 input[type="submit"] {
     display: block;
     width: 100%;
@@ -112,4 +116,9 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: rgba(63, 138, 68, 0.8);
+}
+
+footer {
+    padding-bottom: 10px;
+    font-size: 14px;
 }

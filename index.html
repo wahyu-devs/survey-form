@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
+    <title>Project Survey Form</title>
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,10 +14,8 @@
 
 <body>
     <img src="assets/logo-perkom.png" alt="Perkom Logo" class="logo">
-    <h1 id="title">Survey Form CCTV & Access Point</h1>
-    <!-- <h2>CCTV & Access Point Installation</h2> -->
-    <p id="description">Please fill out this form to provide essential information for the CCTV and access point
-        installation.</p>
+    <h1 id="title">Project Survey Form</h1>
+    <p id="description">Please fill out this form completely and accurately with all required information.</p>
     <form id="survey-form" action="" name="submit-to-google-sheet">
         <section>
             <h3>General Information</h3>
@@ -30,56 +28,49 @@
             <label for="email">
                 Your Email: <input type="email" name="email" id="email" placeholder="e.g., wahyu@perkom.co.id" required>
             </label>
-            <label for="site-location">
-                Site Location: <input type="text" name="siteLocation" id="site-location"
-                    placeholder="e.g., Midplaza - Jakarta" required>
+            <label for="cust-name">
+                Customer Name: <input type="text" name="custName" id="cust-name"
+                    placeholder="e.g., Perkom Indah Murni" required>
             </label>
-            <label for="site-contact-person">
-                Site Contact Person: <input type="text" name="siteContact" id="site-contact-person"
-                    placeholder="e.g., Wahyu - 08123456789" required>
+            <label for="project-name">
+                Project Name: <input type="text" name="projectName" id="project-name"
+                    placeholder="e.g., Refreshment Network" required>
             </label>
             <label for="area-name">
-                Building / Area Name: <input type="text" name="areaName" id="area-name" placeholder="e.g., Main Lobby"
+                Building / Area Name: <input type="text" name="areaName" id="area-name" placeholder="e.g., Head office"
                     required>
             </label>
             <label for="floor-number">
-                Number of Floors: <input type="number" name="floorNumber" id="floor-number" min="1" max="100"
+                Floor Number: <input type="number" name="floorNumber" id="floor-number" min="1" max="100"
                     placeholder="e.g., 21" required>
             </label>
-            <label for="area-size">
-                Area Size (m²): <input type="number" name="areaSize" id="area-size" placeholder="e.g., 150" required>
-            </label>
 
-            <label>Is a building blueprint available?</label>
+            <label>Is a building layout / blueprint available?</label>
             <label for="blueprint"><input id="blueprint" type="radio" name="blueprint" value="yes" class="inline"
                     checked>Yes</label>
             <label for="blueprint"><input id="blueprint" type="radio" name="blueprint" value="no"
                     class="inline">No</label>
 
-            <label>Is electrical power available at the location?</label>
-            <label for="power"><input id="power" type="radio" name="power" value="yes" class="inline"
+            <label>Is new power cable installation required?</label>
+            <label for="power"><input id="power" type="radio" name="newPower" value="yes" class="inline"
                     checked>Yes</label>
-            <label for="power"><input id="power" type="radio" name="power" value="no" class="inline">No</label>
+            <label for="power"><input id="power" type="radio" name="newPower" value="no" class="inline">No</label>
 
-            <label>Is LAN/network available at the location?</label>
-            <label for="network"><input id="network" type="radio" name="network" value="yes" class="inline"
+            <label>Is new LAN cable installation required?</label>
+            <label for="network"><input id="network" type="radio" name="newLAN" value="yes" class="inline"
                     checked>Yes</label>
-            <label for="network" class="last-label"><input id="network" type="radio" name="network" value="no" class="inline">No</label>
+            <label for="network" class="last-label"><input id="network" type="radio" name="newLAN" value="no" class="inline">No</label>
 
         </section>
         <section>
-            <h3>CCTV Point Survey</h3>
+            <h3>CCTV Survey</h3>
             <label for="total-cctv">
-                Total number of CCTV points to install: <input type="number" name="cctvNumber" id="total-cctv"
+                Total Number of CCTV to Install: <input type="number" name="cctvNumber" id="total-cctv"
                     placeholder="e.g., 10" required>
             </label>
             <label for="cctv-location">
-                CCTV Point Location: <input type="text" name="cctvLocation" id="cctv-location"
-                    placeholder="e.g., Entrance, Lobby, Parking Area, Guest Lift" required>
-            </label>
-            <label for="objective">
-                Surveillance Objective: <input type="text" name="objective" id="objective"
-                    placeholder="e.g., Monitor vehicle entry and guests" required>
+                CCTV Location: <input type="text" name="cctvLocation" id="cctv-location"
+                    placeholder="e.g., Entrance, Lobby, Elevator" required>
             </label>
             <label for="height">
                 Mounting Height (meters): <input type="number" name="height" id="height" placeholder="e.g., 3.5"
@@ -92,10 +83,13 @@
             <label for="cctv-type">
                 Camera Type Recommendation:
                 <select name="cctvType" id="cctv-type" required>
-                    <option value="">-- Select camera type --</option>
-                    <option value="Dome">Dome</option>
-                    <option value="Bullet">Bullet</option>
-                    <option value="PTZ">PTZ</option>
+                    <option value="">- Select camera type -</option>
+                    <option value="Dome IP">Dome IP</option>
+                    <option value="Bullet IP">Bullet IP</option>
+                    <option value="PTZ IP">PTZ IP</option>
+                    <option value="Dome Analog">Dome Analog</option>
+                    <option value="Bullet Analog">Bullet Analog</option>
+                    <option value="PTZ Analog">PTZ Analog</option>
                     <option value="Others">Others</option>
                 </select>
             </label>
@@ -106,6 +100,9 @@
         </section>
         <input type="submit" value="Submit" id="submit">
     </form>
+    <footer>
+        <p>Copyright &copy 2025 Wahyu. All rights reserved.</p>
+    </footer>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzu6hxZNq54vt6mXMvYEd6UwKCayE5YGhccctcY4HqXpxey09-__xJYIaAwsnn_jTH8/exec'
         const form = document.forms['submit-to-google-sheet']
