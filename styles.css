@@ -98,10 +98,12 @@ select {
 }
 
 input[type="date"] {
+    appearance: initial;
     -webkit-appearance: none;
 }
 
 select {
+    border-radius: initial;
     -webkit-border-radius: 0px;
 }
 
