@@ -113,9 +113,7 @@
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
-                    alert('Your data has been successfully submitted!');
-                    form.reset();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    window.location.href = 'thank-you.html';
                 })
                 .catch(error => {
                     alert('An error occurred. Please try again.');
