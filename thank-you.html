@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="10; url=index.html">
+    <!-- <meta http-equiv="refresh" content="10; url=index.html"> -->
     <title>Your data has been successfully submitted!</title>
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +18,20 @@
     <h1 id="title">Thank You!</h1>
     <!-- <h2>CCTV & Access Point Installation</h2> -->
     <p id="description">Your data has been successfully submitted.</p>
-    <p>You will be redirected shortly...</p>
+    <p>You will be redirected shortly in <span id="countdown">10</span> seconds...</p>
+    <script>
+        let countdown = 10;
+        const countdownElement = document.getElementById('countdown');
+
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
 </body>
 
 </html>
