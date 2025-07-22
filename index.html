@@ -99,7 +99,7 @@
                     placeholder="Enter any additional notes, concerns, or conditions here..."></textarea>
             </label>
         </section>
-        <input type="submit" value="Submit" id="submit">
+        <button type="submit" id="submit"><span class="btn-text">Submit</span></button>
     </form>
     <footer>
         <p>Copyright &copy 2025 Wahyu. All rights reserved.</p>
@@ -116,9 +116,15 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzu6hxZNq54vt6mXMvYEd6UwKCayE5YGhccctcY4HqXpxey09-__xJYIaAwsnn_jTH8/exec'
         const form = document.forms['submit-to-google-sheet']
+        const submitButton = document.getElementById('submit');
 
         form.addEventListener('submit', e => {
-            e.preventDefault()
+            e.preventDefault();
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            submitButton.disabled = true;
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
                     window.location.href = 'thank-you.html';
@@ -126,8 +132,10 @@
                 .catch(error => {
                     alert('An error occurred. Please try again.');
                     console.error('Error!', error.message);
+                    submitButton.disabled = false;
                 });
         });
+
     </script>
 </body>
 
