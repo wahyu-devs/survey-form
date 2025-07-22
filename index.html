@@ -104,6 +104,15 @@
     <footer>
         <p>Copyright &copy 2025 Wahyu. All rights reserved.</p>
     </footer>
+    <div class="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+    <script>
+        var loadingScreen = document.querySelector(".loadingScreen");
+        window.addEventListener('load', function () {
+            loadingScreen.style.display = 'none';
+        })
+    </script>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzu6hxZNq54vt6mXMvYEd6UwKCayE5YGhccctcY4HqXpxey09-__xJYIaAwsnn_jTH8/exec'
         const form = document.forms['submit-to-google-sheet']
